@@ -3,11 +3,15 @@ import React from "react";
 
 function App (){
 
-	const names = ["Chaithanya","Chey","Something"];
+	const names = ["Chaithanya","Shravya","rajini"];
 
 	return(
 	<div>
-		{names.map(()=><h1>hey</h1>)}
+		{/* {names.map((elem,index)=>(<div className="w-fit px-3 py-4 m-2 bg-zinc-200 rounded-xl">
+			{elem}
+		</div>))} */}
+		{names.map((elem,index)=>(<div className="w-fit px-3 py-4 m-2 bg-zinc-200 rounded-xl">{elem}</div>))}
+		
 	</div>
 	)
 }
