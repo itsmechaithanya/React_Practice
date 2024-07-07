@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Components/Card";
-// import Card from "./Components/Card";
+import Cards from "./Components/Handling";
 
 function App (){
 
@@ -8,8 +8,9 @@ function App (){
 
 	return(
 	<>
-		<Card/>
-		<h1>hey</h1>
+		<Cards/>
+		{/* <Card/> */}
+		{/* <h1>hey</h1> */}
 	</>
 	)
 }
