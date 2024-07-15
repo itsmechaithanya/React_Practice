@@ -11,7 +11,7 @@ function Handling() {
         name:"white shirt",
         dis:"lorem ipsum dolor sit amet, consecteturrramcoritet"
       }
-  ] 
+  ]
   return (
     <div className='w-full h-screen bg-zinc-800 flex items-center justify-center gap-4'>
       {data.map((items,index) =>(
