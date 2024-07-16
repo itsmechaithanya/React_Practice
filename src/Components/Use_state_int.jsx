@@ -2,7 +2,9 @@ import React from 'react'
 
 function Use_state_int() {
   return (
-    <div>Use_state_int</div>
+    <div>
+        Use_state_int
+    </div>
   )
 }
 
