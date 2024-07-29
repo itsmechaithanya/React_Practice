@@ -6,13 +6,15 @@ import Use_State_basic from "./Components/Use_State_basic";
 import Use_state_int from "./Components/Use_state_int";
 import Use_state_adv from "./Components/Use_state_adv";
 import Mastering_useState from "./Components/Mastering_useState";
+import Mastering_useStatetwo from "./Components/Mastering_useStatetwo";
 
 function App (){
 	const names = ["Chaithanya","rajini"];
 
 	return(
 	<>
-		<Mastering_useState/>
+		<Mastering_useStatetwo/>
+		{/* <Mastering_useState/> */}
 		{/* <Use_state_adv/> */}
 		{/* <Use_state_int/> */}
 		{/* <Use_State_basic/> */}
