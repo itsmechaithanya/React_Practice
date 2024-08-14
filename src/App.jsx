@@ -10,13 +10,15 @@ import Mastering_useStatetwo from "./Components/Mastering_useStatetwo";
 import Mastering_useStatethree_array from "./Components/Mastering_useStatethree_array";
 import Mastering_useStatefour_arraytwo from "./Components/Mastering_useStatefour_arraytwo";
 import Mastering_useState_last from "./Components/Mastering_useState_last";
+import UseState_hooks from "./Components/UseState_hooks";
 
 function App (){
 	const names = ["Chaithanya","rajini"];
 
 	return(
 	<>
-		<Mastering_useState_last/>
+		<UseState_hooks/>
+		{/* <Mastering_useState_last/> */}
 		{/* <Mastering_useStatefour_arraytwo/> */}
 		{/* <Mastering_useStatethree_array/> */}
 		{/* <Mastering_useStatetwo/> */}
