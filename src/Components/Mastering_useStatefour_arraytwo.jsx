@@ -19,7 +19,7 @@ function Mastering_useStatefour_arraytwo() {
   return (
     <div className='p-5'>
       {val.map(items=><h1>{items}</h1>)}
-      <button onClick={()=>setval(val.filter((items,index)=>index!=2))} className='bg-pink-400 px-3 py-1 rounded-full'>click</button>
+      <button onClick={()=>setval([...val ,7])} className='bg-pink-400 px-3 py-1 rounded-full'>click</button>
     </div>
   )
 }
