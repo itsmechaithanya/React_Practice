@@ -23,6 +23,7 @@ function App (){
 	]
 
 	const[realdata,setdata] = useState(data)
+	
 	const handleFriends = (Cardindex) => {
 		setdata((prev)=>{
 			return prev.map((item, index)=>{
