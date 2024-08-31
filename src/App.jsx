@@ -15,6 +15,8 @@ import UseState_hook_CreatingSomething from "./Components/UseState_hook_Creating
 import Passing_data_via_props from "./Components/Passing_data_via_props";
 import Props_and_States_Exercise from "./Components/Props_and_States_Exercise";
 import NavBar from "./Components/NavBar";
+import Form_handling from "./Components/Form_handling";
+import { useForm } from 'react-hook-form'
 
 function App (){
 	// const data = [
@@ -37,43 +39,49 @@ function App (){
 	// 	})
 	// }
 
-	const data = [
-		{
-			img:'https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452',
-			name:'Starboy',
-			artist:'TheWeeknd',
-			added:false,
-		},
-		{
-			img:'https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg',
-			name:'Paradise',
-			artist:'PSD',
-			added:false,
-		},
-		{
-			img:'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/palm-tree-desert-cd-cover-music-design-template-f6d4327e69f24bfb2febca081f5301b6_screen.jpg?ts=1617999453',
-			name:'Palm Tree Desert',
-			artist:'Deryaba',
-			added:false,
-		}
-	]
+	// const data = [
+	// 	{
+	// 		img:'https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452',
+	// 		name:'Starboy',
+	// 		artist:'TheWeeknd',
+	// 		added:false,
+	// 	},
+	// 	{
+	// 		img:'https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg',
+	// 		name:'Paradise',
+	// 		artist:'PSD',
+	// 		added:false,
+	// 	},
+	// 	{
+	// 		img:'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/palm-tree-desert-cd-cover-music-design-template-f6d4327e69f24bfb2febca081f5301b6_screen.jpg?ts=1617999453',
+	// 		name:'Palm Tree Desert',
+	// 		artist:'Deryaba',
+	// 		added:false,
+	// 	},
+		
+	// ]
 
-	const [SongData,SetSongData] = useState(data)
-
-	const handleclick = (index) =>{
-		alert(index)
-	}
+	// const [SongData,SetSongData] = useState(data)
+	// const handleclick = (index) =>{
+	// 	SetSongData((prev)=>{
+	// 		return prev.map((item,itemindex)=>{
+	// 			if(itemindex === index) return{...item, added:!item.added};
+	// 			return item;
+	// 		})
+	// 	})
+	// }
 
 	return(
 	<>
-		<div className="h-screen w-screen">
-			<NavBar/>
+		<Form_handling/>
+		{/* <div className="h-screen w-screen">
+			<NavBar data={SongData}/>
 			<div className="flex justify-center gap-4 mt-10 flex-wrap">
 				{SongData.map((obj,index)=>
 				<Props_and_States_Exercise name={obj.name} img={obj.img} artist={obj.artist} added={obj.added} handleclick={handleclick} index={index} key={index}/>
 			)}
 			</div>
-		</div>
+		</div> */}
 		{/* <div className="w-full h-screen bg-zinc-200 flex justify-center items-center gap-3">
 			{realdata.map((item,index)=>(
 				<Passing_data_via_props handleFriends={handleFriends} index={index} key={index} img={item.img} name={item.name} place={item.place} friends={item.friends}/>
