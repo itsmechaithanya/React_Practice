@@ -60,13 +60,17 @@ function App (){
 
 	const [SongData,SetSongData] = useState(data)
 
+	const handleclick = (index) =>{
+		alert(index)
+	}
+
 	return(
 	<>
 		<div className="h-screen w-screen">
 			<NavBar/>
 			<div className="flex justify-center gap-4 mt-10 flex-wrap">
-				{SongData.map((obj)=>
-				<Props_and_States_Exercise name={obj.name} img={obj.img} artist={obj.artist} added={obj.added}/>
+				{SongData.map((obj,index)=>
+				<Props_and_States_Exercise name={obj.name} img={obj.img} artist={obj.artist} added={obj.added} handleclick={handleclick} index={index} key={index}/>
 			)}
 			</div>
 		</div>

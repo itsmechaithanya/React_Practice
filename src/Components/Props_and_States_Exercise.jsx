@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Props_and_States_Exercise({name,img,artist,added}) {
+function Props_and_States_Exercise({name,img,artist,added,handleclick,index}) {
   return (
     <div className='w-60 p-4 bg-zinc-100 rounded-md flex gap-3 relative pb-20'>
         <div className='w-20 h-20 bg-orange-300 rounded-md overflow-hidden'>
@@ -10,7 +10,7 @@ function Props_and_States_Exercise({name,img,artist,added}) {
             <h3 className='text-xl'>{name}</h3>
             <h5 className='text-sm'>{artist}</h5>
         </div>
-        <button className={`absolute ${added == false ? 'bg-green-500' : 'bg-orange-500'}  px-10 py-2 bottom-5 right-12 text-base rounded-full`}>{added == false ? 'Add to Fav' : "Fav"}</button>
+        <button onClick={()=>handleclick(index)} className={`absolute ${added == false ? 'bg-teal-300' : 'bg-orange-500'}  px-10 py-2 bottom-5 right-12 text-base rounded-full`}>{added == false ? 'Add to Fav' : "Added"}</button>
     </div>
   )
 }
