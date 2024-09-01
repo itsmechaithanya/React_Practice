@@ -17,6 +17,8 @@ import Props_and_States_Exercise from "./Components/Props_and_States_Exercise";
 import NavBar from "./Components/NavBar";
 import Form_handling from "./Components/Form_handling";
 import { useForm } from 'react-hook-form'
+import Formm from "./Components/Formm";
+import Form_Cards from "./Components/Form_Cards";
 
 function App (){
 	// const data = [
@@ -73,7 +75,13 @@ function App (){
 
 	return(
 	<>
-		<Form_handling/>
+		<div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
+			<div className=" container mx-auto">	
+				<Form_Cards/>
+				<Formm/>
+			</div>
+		</div>
+		{/* <Form_handling/> */}
 		{/* <div className="h-screen w-screen">
 			<NavBar data={SongData}/>
 			<div className="flex justify-center gap-4 mt-10 flex-wrap">
