@@ -78,11 +78,15 @@ function App (){
 		Setusers([...users,data])
 	}
 
+	const handleRemove = (id)=>{
+		Setusers(()=>users.filter((item,index)=>index!=id))
+	}
+
 	return(
 	<>
 		<div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
 			<div className=" container mx-auto">	
-				<Form_Cards users={users}/>
+				<Form_Cards handleRemove={handleRemove} users={users}/>
 				<Formm handleData={handleData}/>
 			</div>
 		</div>
