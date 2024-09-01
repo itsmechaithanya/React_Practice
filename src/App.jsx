@@ -73,12 +73,17 @@ function App (){
 	// 	})
 	// }
 
+	const [users,Setusers] = useState([]);
+	const handleData = (data) => {
+		Setusers([...users,data])
+	}
+
 	return(
 	<>
 		<div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
 			<div className=" container mx-auto">	
-				<Form_Cards/>
-				<Formm/>
+				<Form_Cards users={users}/>
+				<Formm handleData={handleData}/>
 			</div>
 		</div>
 		{/* <Form_handling/> */}
