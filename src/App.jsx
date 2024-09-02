@@ -19,6 +19,8 @@ import Form_handling from "./Components/Form_handling";
 import { useForm } from 'react-hook-form'
 import Formm from "./Components/Formm";
 import Form_Cards from "./Components/Form_Cards";
+import Home from "./Components/Home";
+import { Link, Route, Routes } from "react-router-dom";
 
 function App (){
 	// const data = [
@@ -73,23 +75,32 @@ function App (){
 	// 	})
 	// }
 
-	const [users,Setusers] = useState([]);
-	const handleData = (data) => {
-		Setusers([...users,data])
-	}
+	// const [users,Setusers] = useState([]);
+	// const handleData = (data) => {
+	// 	Setusers([...users,data])
+	// }
 
-	const handleRemove = (id)=>{
-		Setusers(()=>users.filter((item,index)=>index!=id))
-	}
+	// const handleRemove = (id)=>{
+	// 	Setusers(()=>users.filter((item,index)=>index!=id))
+	// }
 
 	return(
 	<>
-		<div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
+		<nav>
+			<Link to="/">Home</Link>
+			<Link to="/User">User</Link>
+			<Link to="/About">About</Link>
+		</nav>
+
+		<Routes>
+			<Route/>
+		</Routes>
+		{/* <div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
 			<div className=" container mx-auto">	
 				<Form_Cards handleRemove={handleRemove} users={users}/>
 				<Formm handleData={handleData}/>
 			</div>
-		</div>
+		</div> */}
 		{/* <Form_handling/> */}
 		{/* <div className="h-screen w-screen">
 			<NavBar data={SongData}/>
