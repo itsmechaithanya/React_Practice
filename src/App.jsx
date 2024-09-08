@@ -23,6 +23,8 @@ import Home from "./Components/Home";
 import { Link, Route, Routes } from "react-router-dom";
 import About from "./Components/About";
 import User from "./Components/User";
+import Routing from "./Utils/Routing";
+import Navv from "./Components/Navv";
 
 function App (){
 	// const data = [
@@ -88,17 +90,8 @@ function App (){
 
 	return(
 	<>
-		<nav className="mt-10 flex justify-center gap-10">
-			<Link to="/">Home</Link>
-			<Link to="/User">User</Link>
-			<Link to="/About">About</Link>
-		</nav>
-
-		<Routes>
-			<Route path="/" element={<Home/>}/>
-			<Route path="/User" element={<User/>}/>
-			<Route path="/About" element={<About/>}/>
-		</Routes>
+		<Navv/>
+		<Routing/>
 		{/* <div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
 			<div className=" container mx-auto">	
 				<Form_Cards handleRemove={handleRemove} users={users}/>
