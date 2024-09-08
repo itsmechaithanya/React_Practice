@@ -21,6 +21,8 @@ import Formm from "./Components/Formm";
 import Form_Cards from "./Components/Form_Cards";
 import Home from "./Components/Home";
 import { Link, Route, Routes } from "react-router-dom";
+import About from "./Components/About";
+import User from "./Components/User";
 
 function App (){
 	// const data = [
@@ -86,14 +88,16 @@ function App (){
 
 	return(
 	<>
-		<nav>
+		<nav className="mt-10 flex justify-center gap-10">
 			<Link to="/">Home</Link>
 			<Link to="/User">User</Link>
 			<Link to="/About">About</Link>
 		</nav>
 
 		<Routes>
-			<Route/>
+			<Route path="/" element={<Home/>}/>
+			<Route path="/User" element={<User/>}/>
+			<Route path="/About" element={<About/>}/>
 		</Routes>
 		{/* <div className="w-full h-screen bg-rose-200 flex items-center justify-center flex-col">
 			<div className=" container mx-auto">	
